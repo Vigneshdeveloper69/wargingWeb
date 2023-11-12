@@ -11,13 +11,13 @@ body{
 }
 
 nav{
-    background: #0082e6;
+    background: #000000;
     height: 80px;
     width: 100%;
 }
 
 label.logo{
-    color: white;
+    color: #FE0000;
     font-size: 35px;
     line-height: 80px;
     padding: 0 100px;
@@ -43,7 +43,7 @@ nav ul li a{
     text-transform: uppercase;
 }
  a.active, a:hover{
-    background: #1b9bff;
+    background: #d52626
     transition: .5s;
  }
 
@@ -73,19 +73,21 @@ nav ul li a{
  }
 
  @media (max-width: 858px){
+    
 
     .checkBtn{
         display: block;
     }
     ul{
-        position: fixed;
+        position: absolute;
         width: 100%;
         height: 100vh;
-        background: #2c3e50;
+        background: #393a3d;
         top: 80px;
         left: -100%;
         text-align: center;
         transition: all .5s;
+        overflow: hidden;
     
     }
 
@@ -101,13 +103,15 @@ nav ul li a{
 
     a:hover, a.active{
         background: none;
-        color: #0082e6;
+        color: #d52626;
     }
 
     #check:checked ~ ul {
         left: 0;
     }
 
-}
+    #check:checked + .checkBtn {
+        transform: rotate(90deg);
+    }
 
- 
+}
